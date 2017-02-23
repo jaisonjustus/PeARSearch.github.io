@@ -17,6 +17,7 @@
   width: 200px;
   height: 200px;
   margin-right: 30px;
+  flex-shrink: 0;
 }
 
 .Member__Content  {}
