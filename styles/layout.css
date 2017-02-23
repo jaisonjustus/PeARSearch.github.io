@@ -1,0 +1,16 @@
+.Layout__Sidebar  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.Layout__Content  {
+  width: 630px;
+  margin-left: 325px;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
