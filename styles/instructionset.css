@@ -1,0 +1,27 @@
+.InstructionSet {
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  margin: 15px 0;
+}
+
+.InstructionSet__Header {
+  background-color: #fafafa;
+  display: flex;
+  padding: 13px 20px;
+  cursor: pointer;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.InstructionSet__Title  {
+  color: #1D90B1;
+  flex-grow: 1;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.InstructionSet__Icon  {
+  flex-grow: 0;
+}
+
+.InstrcutionSet__Content  {}
