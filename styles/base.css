@@ -49,6 +49,11 @@ a {
   color: #1D90B1;
 }
 
+.Logo {
+  width: 100px;
+  margin-bottom: 40px;
+}
+
 .Splitter {
   display: flex;
   list-style: none;
