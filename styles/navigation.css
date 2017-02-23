@@ -10,11 +10,22 @@
 }
 
 .Navigation--Main li  {
+  color: #333333;
   margin-bottom: 30px;
 }
 
+.Navigation--Main li a  {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Navigation--Main li a:hover  {
+  color: #1D90B1 !important;
+  text-decoration: underline;
+}
+
 .Navigation--Selected {
-  color: #1D90B1;
+  color: #1D90B1 !important;
 }
 
 .Navigation__Splitter {
