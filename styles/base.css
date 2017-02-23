@@ -45,3 +45,29 @@ a {
   color: #1D90B1;
   font-weight: 500;
 }
+
+.Splitter {
+  display: flex;
+  list-style: none;
+  height: 23px;
+  margin: 60px 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.Square {
+  background-color: #2AB9E2;
+  transform: rotate(45deg);
+}
+
+.Square--small  {
+  width: 7px;
+  height: 7px;
+}
+
+.Square--big  {
+  width: 15px;
+  height: 15px;
+}
