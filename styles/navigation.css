@@ -1,0 +1,33 @@
+.Navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Navigation--Main {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Navigation--Main li  {
+  margin-bottom: 30px;
+}
+
+.Navigation--Selected {
+  color: #1D90B1;
+}
+
+.Navigation__Splitter {
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 20px;
+}
+
+.Navigation--Secondry {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.Navigation--Secondry li  {
+  margin-bottom: 15px;
+}
