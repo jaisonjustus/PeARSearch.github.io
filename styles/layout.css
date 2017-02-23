@@ -11,6 +11,10 @@
 .Layout__Content  {
   width: 630px;
   margin-left: 325px;
-  padding-top: 60px;
+  padding: 60px 0;
   box-sizing: border-box;
+}
+
+.Gap--45 {
+  margin-top: 45px;
 }
