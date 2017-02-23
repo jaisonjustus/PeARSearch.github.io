@@ -1,0 +1,11 @@
+.CallToAction {
+  text-align: center;
+  display: table;
+  margin: 45px 0 0 0;
+}
+
+.CallToAction__Hint {
+  font-size: 16px;
+  color: #808080;
+  margin: 5px 0 0 0;
+}
