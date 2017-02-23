@@ -29,6 +29,16 @@
   color: #808080;
 }
 
+.Member__Social {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.Member__Social a {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .Member__Bio  {
   margin-top: 15px;
 }
