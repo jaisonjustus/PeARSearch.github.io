@@ -78,3 +78,7 @@ a {
   border-right: 10px solid transparent;
   border-top: 10px solid #1D90B1;
 }
+
+.hide {
+  display: none;
+}
