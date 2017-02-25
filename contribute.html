@@ -31,12 +31,103 @@
 
     <h2>Step 1: Setting up the Development Evironment</h2>
     <p>First, the best way to get acquainted with the current state of the project is to install the development version. Please follow the instructions here to set things up</p>
-    <div class="InstructionSet">
+    <div id="#instruction-set" class="InstructionSet">
       <div class="InstructionSet__Header">
         <p class="InstructionSet__Title">Click to expand Instruction set</p>
         <i class="Icon__ArrowDown"></i>
       </div>
-      <div class="InstrcutionSet__Content"></div>
+      <div class="InstructionSet__Content hide">
+        <ol class="InstructionSet__List InstructionSet__List--Main">
+          <li class="InstructionSet__ListItem">
+            <h3>1. Clone PeARS repo</h3>
+            <pre>git clone -b development https://github.com/PeARSearch/PeARS.git</pre>
+            <pre>cd PeARS</pre>
+          </li>
+          <li class="InstructionSet__ListItem">
+            <h3>2. Setting up the development environment</h3>
+            <p>You can use script or the automatic installation instruction below.</p>
+            <p>Automatic installation: <pre>$ python install.py</pre></p>
+            <ol class="InstructionSet__List InstructionSet__List--Sub">
+              <li class="InstructionSet__ListItem">
+                <h4>2.1. Set up virtualenv</h4>
+                <p>We recommend using virtualenv for the development. If you are just here for test it out, skip to the next section.</p>
+                <h5>Install pip using easy_install</h5>
+                <pre>sudo easy_install pip</pre>
+                <p>or some other way your distribution supports like:</p>
+                <pre>sudo yum install python-pip</pre>
+                <h5>Install virtualenv using pip</h5>
+                <pre>sudo pip install virtualenv</pre>
+                <h5>Create a new virtualenv for PeARS and activate it</h5>
+                <pre>virtualenv pears_env && source pears_env/bin/activate</pre>
+              </li>
+              <li class="InstructionSet__ListItem">
+                <h4>2.2. Install the build dependencies</h4>
+                <p>We recommend using pip for installation. In case you don't have this, look inside requirements.txt and install dependencies manually.</p>
+                <pre>pip install -r requirements.txt</pre>
+              </li>
+              <li class="InstructionSet__ListItem">
+                <h4>2.3. Get the sematic space</h4>
+                <p>In the root directory of the repo, run</p>
+                <pre>wget http://clic.cimec.unitn.it/~aurelie.herbelot/openvectors.dump.bz2</pre>
+                <p>then</p>
+                <pre>python uncompress_db.py openvectors.dump.bz2</pre>
+              </li>
+            </ol>
+          </li>
+          <li class="InstructionSet__ListItem">
+            <h3>3. Running the PeARS search engine</h3>
+            <p>In the root directory of the repo, run</p>
+            <pre>python run.py</pre>
+            <p>Go to the browser and type localhost:5000. You should find PeARS running there. We have provided a couple of demo pears for you to try. They of course only cover a tiny amount of pages and information. Try some queries related to food <i>(e.g. chocolate cake')</i> or the enviromnent <i>(e.g.endangered species')</i></p>
+          </li>
+        </ol>
+
+        <!--<ol class="InstructionSet__MainList">
+          <li>
+
+            <h3>1. Clone PeARS repo</h3>
+            <pre>git clone -b development https://github.com/PeARSearch/PeARS.git</pre>
+            <pre>cd PeARS</pre>
+          </li>
+          <li>
+            <h3>2. Setting up the development environment</h3>
+            <p>You can use script or the automatic installation instruction below.</p>
+            <p>Automatic installation: <pre>$ python install.py</pre></p>
+            <ol class="InstructionSet__SubList">
+              <li>
+                <h4>2.1. Set up virtualenv</h4>
+                <p>We recommend using virtualenv for the development. If you are just here for test it out, skip to the next section.</p>
+                <h5>Install pip using easy_install</h5>
+                <pre>sudo easy_install pip</pre>
+                <p>or some other way your distribution supports like:</p>
+                <pre>sudo yum install python-pip</pre>
+                <h5>Install virtualenv using pip</h5>
+                <pre>sudo pip install virtualenv</pre>
+                <h5>Create a new virtualenv for PeARS and activate it</h5>
+                <pre>virtualenv pears_env && source pears_env/bin/activate</pre>
+              </li>
+              <li>
+                <h4>2.2. Install the build dependencies</h4>
+                <p>We recommend using pip for installation. In case you don't have this, look inside requirements.txt and install dependencies manually.</p>
+                <pre>pip install -r requirements.txt</pre>
+              </li>
+              <li>
+                <h4>2.3. Get the sematic space</h4>
+                <p>In the root directory of the repo, run</p>
+                <pre>wget http://clic.cimec.unitn.it/~aurelie.herbelot/openvectors.dump.bz2</pre>
+                <p>then</p>
+                <pre>python uncompress_db.py openvectors.dump.bz2</pre>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <h3>Running the PeARS search engine</h3>
+            <p>In the root directory of the repo, run</p>
+            <pre>python run.py</pre>
+            <p>Go to the browser and type localhost:5000. You should find PeARS running there. We have provided a couple of demo pears for you to try. They of course only cover a tiny amount of pages and information. Try some queries related to food <i>(e.g. chocolate cake')</i> or the enviromnent <i>(e.g.endangered species')</i></p>
+          </li>
+        </ol>-->
+      </div>
     </div>
     <p>Do let us know is anything isn't working for you. In case you'd like to read up on the technical background for PeARS, we have provided a few useful links here.</p>
 
@@ -210,5 +301,6 @@
     </section>
 
   </section>
+  <script type="text/javascript" src="scripts/contribute.js"></script>
 </body>
 </html>
