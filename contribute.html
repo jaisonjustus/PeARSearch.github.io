@@ -81,52 +81,6 @@
             <p>Go to the browser and type localhost:5000. You should find PeARS running there. We have provided a couple of demo pears for you to try. They of course only cover a tiny amount of pages and information. Try some queries related to food <i>(e.g. chocolate cake')</i> or the enviromnent <i>(e.g.endangered species')</i></p>
           </li>
         </ol>
-
-        <!--<ol class="InstructionSet__MainList">
-          <li>
-
-            <h3>1. Clone PeARS repo</h3>
-            <pre>git clone -b development https://github.com/PeARSearch/PeARS.git</pre>
-            <pre>cd PeARS</pre>
-          </li>
-          <li>
-            <h3>2. Setting up the development environment</h3>
-            <p>You can use script or the automatic installation instruction below.</p>
-            <p>Automatic installation: <pre>$ python install.py</pre></p>
-            <ol class="InstructionSet__SubList">
-              <li>
-                <h4>2.1. Set up virtualenv</h4>
-                <p>We recommend using virtualenv for the development. If you are just here for test it out, skip to the next section.</p>
-                <h5>Install pip using easy_install</h5>
-                <pre>sudo easy_install pip</pre>
-                <p>or some other way your distribution supports like:</p>
-                <pre>sudo yum install python-pip</pre>
-                <h5>Install virtualenv using pip</h5>
-                <pre>sudo pip install virtualenv</pre>
-                <h5>Create a new virtualenv for PeARS and activate it</h5>
-                <pre>virtualenv pears_env && source pears_env/bin/activate</pre>
-              </li>
-              <li>
-                <h4>2.2. Install the build dependencies</h4>
-                <p>We recommend using pip for installation. In case you don't have this, look inside requirements.txt and install dependencies manually.</p>
-                <pre>pip install -r requirements.txt</pre>
-              </li>
-              <li>
-                <h4>2.3. Get the sematic space</h4>
-                <p>In the root directory of the repo, run</p>
-                <pre>wget http://clic.cimec.unitn.it/~aurelie.herbelot/openvectors.dump.bz2</pre>
-                <p>then</p>
-                <pre>python uncompress_db.py openvectors.dump.bz2</pre>
-              </li>
-            </ol>
-          </li>
-          <li>
-            <h3>Running the PeARS search engine</h3>
-            <p>In the root directory of the repo, run</p>
-            <pre>python run.py</pre>
-            <p>Go to the browser and type localhost:5000. You should find PeARS running there. We have provided a couple of demo pears for you to try. They of course only cover a tiny amount of pages and information. Try some queries related to food <i>(e.g. chocolate cake')</i> or the enviromnent <i>(e.g.endangered species')</i></p>
-          </li>
-        </ol>-->
       </div>
     </div>
     <p>Do let us know is anything isn't working for you. In case you'd like to read up on the technical background for PeARS, we have provided a few useful links here.</p>
@@ -140,7 +94,11 @@
           <a href="#">
             <h3>PeARSearch/PeARS</h3>
           </a>
-          <p class="Issue__Count">Open Issues: 15</p>
+          <p class="Issue__Count">Open Issues:
+            <span class="Issue__CountValue" id="PeARS">
+              <img src="images/spinner.gif"/>
+            </span>
+          </p>
         </div>
       </li>
       <li class="Issue">
@@ -149,7 +107,11 @@
           <a href="#">
             <h3>PeARSearch/browser-history-analyser</h3>
           </a>
-          <p class="Issue__Count">Open Issues: 01</p>
+          <p class="Issue__Count">Open Issues:
+            <span class="Issue__CountValue" id="browsing-history-analyser">
+              <img src="images/spinner.gif"/>
+            </span>
+          </p>
         </div>
       </li>
     </ol>
