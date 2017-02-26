@@ -2,6 +2,11 @@
   border-radius: 3px;
   border: 1px solid #dddddd;
   margin: 15px 0;
+  transition: all ease-in-out 200ms;
+}
+
+.InstructionSet:hover {
+  box-shadow: 0 1px 1px 0 #eee;
 }
 
 .InstructionSet__Header {

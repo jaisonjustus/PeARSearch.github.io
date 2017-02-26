@@ -5,6 +5,7 @@
   border-bottom: 3px solid #1D90B1;
   display: table;
   text-decoration: none;
+  transition: all ease-in-out 200ms;
 }
 
 .Button:hover {
