@@ -1,6 +1,4 @@
-.Article  {}
-
-.Article blockquote {
+blockquote {
 font-family: Georgia, serif;
 font-size: 24px;
 font-style: italic;
@@ -12,13 +10,12 @@ position: relative;
 color: #383838;
 }
 
-.Article p  {
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.Article li {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 15px;
+blockquote:before {
+display: block;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: -20px;
+top: -20px;
+color: #7a7a7a;
 }
