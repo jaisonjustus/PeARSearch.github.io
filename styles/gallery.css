@@ -1,0 +1,36 @@
+.Gallery_Row {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+}
+
+.Gallery_Row div {}
+
+.Intro {
+  width: 900px;
+}
+
+.Intro div {}
+
+.Image  {
+  margin-right: 30px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.Image img  {
+  width: 500px;
+  height: auto;
+
+}
+
+.Image p {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 14px;
+  left: 15px;
+  bottom: -30px;
+}
+
