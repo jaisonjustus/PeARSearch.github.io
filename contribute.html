@@ -15,21 +15,27 @@
   <section class="Layout__Sidebar">
     <img class="Logo" src="images/logo.svg" alt="Pearsearch logo"/>
     <nav class="Navigation Navigation--Main">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li class="Navigation--Selected"><a href="contribute.html">Contribute</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="technology.html">What is PeARS?</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="posts.html">Writing</a></li>
+          <li class="Navigation--Selected"><a href="contribute.html">Contribute</a></li>
+          <li><a href="faq.html">F.A.Q.</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
     </nav>
     <hr class="Navigation__Splitter"/>
     <nav class="Navigation Navigation--Secondry">
-      <li>Github</li>
-      <li>IRC Channel</li>
-      <li>Mailing List</li>
+      <li><a href="https://github.com/PeARSearch/PeARS-orchard">Install from Github</a></li>
+      <li>IRC Channel:<br>#pears on freenode</li>
     </nav>
   </section>
   <section class="Layout__Content">
-    <h1 class="PageTitle">Would you like<br/>to Contribute</h1>
+    <h1 class="PageTitle">Help the team</h1>
 
-    <h2>Step 1: Setting up the Development Evironment</h2>
+    <div><img src="images/team/team-grayscale.png" width="600px"/></div><br><br>
+
+    <h2>Step 1: Setting up the PeARS environment</h2>
     <p>First, the best way to get acquainted with the current state of the project is to install the development version. Please follow the instructions here to set things up</p>
     <div id="#instruction-set" class="InstructionSet">
       <div class="InstructionSet__Header">
@@ -40,62 +46,60 @@
         <ol class="InstructionSet__List InstructionSet__List--Main">
           <li class="InstructionSet__ListItem">
             <h3>1. Clone PeARS repo</h3>
-            <pre>git clone -b development https://github.com/PeARSearch/PeARS.git</pre>
-            <pre>cd PeARS</pre>
+            <pre>git clone https://github.com/PeARSearch/PeARS-orchard.git</pre>
+            <pre>cd PeARS-orchard</pre>
           </li>
           <li class="InstructionSet__ListItem">
-            <h3>2. Setting up the development environment</h3>
-            <p>You can use script or the automatic installation instruction below.</p>
-            <p>Automatic installation: <pre>$ python install.py</pre></p>
+            <h3>2. Setting up the environment</h3>
             <ol class="InstructionSet__List InstructionSet__List--Sub">
               <li class="InstructionSet__ListItem">
                 <h4>2.1. Set up virtualenv</h4>
                 <p>We recommend using virtualenv for the development. If you are just here for test it out, skip to the next section.</p>
-                <h5>Install pip using easy_install</h5>
-                <pre>sudo easy_install pip</pre>
+                <h5>Install pip3 using easy_install</h5>
+                <pre>sudo easy_install pip3</pre>
                 <p>or some other way your distribution supports like:</p>
-                <pre>sudo yum install python-pip</pre>
-                <h5>Install virtualenv using pip</h5>
-                <pre>sudo pip install virtualenv</pre>
+                <pre>sudo yum install python3-pip</pre>
+                <h5>Install virtualenv using pip3</h5>
+                <pre>sudo pip3 install virtualenv</pre>
                 <h5>Create a new virtualenv for PeARS and activate it</h5>
-                <pre>virtualenv pears_env && source pears_env/bin/activate</pre>
+                <pre>virtualenv -p python3 env && source env/bin/activate</pre>
               </li>
               <li class="InstructionSet__ListItem">
                 <h4>2.2. Install the build dependencies</h4>
                 <p>We recommend using pip for installation. In case you don't have this, look inside requirements.txt and install dependencies manually.</p>
-                <pre>pip install -r requirements.txt</pre>
+                <pre>pip3 install -r requirements.txt</pre>
               </li>
               <li class="InstructionSet__ListItem">
-                <h4>2.3. Get the sematic space</h4>
+                <h4>2.3. Unpack the semantic space</h4>
                 <p>In the root directory of the repo, run</p>
-                <pre>wget http://clic.cimec.unitn.it/~aurelie.herbelot/openvectors.dump.bz2</pre>
+                <pre>cd app/static/spaces</pre>
                 <p>then</p>
-                <pre>python uncompress_db.py openvectors.dump.bz2</pre>
+                <pre>english.dm.zip</pre>
               </li>
             </ol>
           </li>
           <li class="InstructionSet__ListItem">
             <h3>3. Running the PeARS search engine</h3>
             <p>In the root directory of the repo, run</p>
-            <pre>python run.py</pre>
-            <p>Go to the browser and type localhost:5000. You should find PeARS running there. We have provided a couple of demo pears for you to try. They of course only cover a tiny amount of pages and information. Try some queries related to food <i>(e.g. chocolate cake')</i> or the enviromnent <i>(e.g.endangered species')</i></p>
+            <pre>python3 run.py</pre>
+            <p>Go to the browser and type localhost:8080. You should find PeARS running there. You don't have any pages indexed yet, so go to the F.A.Q. page (link at the top of the page) and follow the short instructions to get you going!</i></p>
           </li>
         </ol>
       </div>
     </div>
-    <p>Do let us know is anything isn't working for you. In case you'd like to read up on the technical background for PeARS, we have provided a few useful links here.</p>
+    <p>Do let us know is anything isn't working for you by opening an issue on the GitHub page!</p>
 
-    <h2 class="Gap--45">Step 2: Check for Open Issues</h2>
-    <p> check out the current issues in the PeARS and browsing-history-analyser repos. You may find something you might like to contribute to. Things are changing quite rapidly, so it is always best to drop us a short line saying you'd like to take on the issue before you actually make a start. We may have more up-to-date info than what is on GitHub!</p>
+    <h2 class="Gap--45">Step 2: Check for open issues</h2>
+    <p> Check out the current issues in the PeARS repo. You may find something you might like to contribute to. Things are changing quite rapidly, so it is always best to drop us a short line saying you'd like to take on the issue before you actually make a start. We may have more up-to-date info than what is on GitHub!</p>
     <ol class="Issues">
       <li class="Issue">
         <img class="Issue__Icon" src="images/github-blue.svg"/>
         <div class="Issue__Content">
           <a href="#">
-            <h3>PeARSearch/PeARS</h3>
+            <h3>PeARSearch/PeARS-orchard</h3>
           </a>
           <p class="Issue__Count">Open Issues:
-            <span class="Issue__CountValue" id="PeARS">
+            <span class="Issue__CountValue" id="PeARS-orchard">
               <img src="images/spinner.gif"/>
             </span>
           </p>
@@ -104,31 +108,12 @@
     </ol>
 
     <h2 class="Gap--45">Step 3: Connect with the Team</h2>
-    <p>if you have other ideas, comments, problems, don't hesitate to contact us, either on IRC or on our discussion board (see below for details).</p>
-    <ul class="Footer__Links">
-      <li>
-        <a href="#">
-          <h3>IRC: #pears on Freenode</h3>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h3>PeARS Discourse Discussion</h3>
-        </a>
-      </li>
-    </ul>
+    <p>if you have other ideas, comments, problems, don't hesitate to contact us, either on the GitHub issue page, or via IRC. One of us is usually hanging about at #pears on Freenode.</p><br><br>
 
-    <ul class="Splitter">
-      <li class="Splitter__Square Splitter__Square--small"></li>
-      <li class="Splitter__Square Splitter__Square--big"></li>
-      <li class="Splitter__Square Splitter__Square--small"></li>
-    </ul>
-
-    <h2>Meet the Team</h2>
-
+    <section>
     <ul class="Team">
       <li class="Member">
-        <img class="Member__Photo" src="images/team/aurelie.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/aurelie-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
           <h3 class="Member__Name">Aurelie Herbelot</h3>
           <p class="Member__Designation">Computational Linguist</p>
@@ -142,11 +127,11 @@
               Github
             </a>
           </span>
-          <p class="Member__Bio">Having worked as a fluffy toy seller, a mortgage adviser and random other things, Aurelie decided that her real vocation was, in fact, computational semantics. In 2010, she received her PhD in Natural Language Processing from the Computer Laboratory at the University of Cambridge and has been working in research since then. She is currently based at the Centre for Mind/Brain Sciences at the University of Trento, Italy. Her work focuses on building computer systems which simulate human language understanding.</p>
+          <p class="Member__Bio">Having worked as a fluffy toy seller, a mortgage adviser and random other things, Aurelie decided that her real vocation was, in fact, computational semantics. In 2010, she received her PhD in Natural Language Processing from the Computer Laboratory at the University of Cambridge and has been working in research since then. Her work focuses on building computer systems which simulate human language understanding.</p>
         </div>
       </li>
       <li class="Member">
-        <img class="Member__Photo" src="images/team/behrang.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/behrang-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
           <h3 class="Member__Name">Behrang QasemiZadeh</h3>
           <p class="Member__Designation">Computer Scientist</p>
@@ -164,7 +149,7 @@
         </div>
       </li>
       <li class="Member">
-        <img class="Member__Photo" src="images/team/hrishi.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/hrishi-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
           <h3 class="Member__Name">Hrishikesh K. B.</h3>
           <p class="Member__Designation">Python Hacker</p>
@@ -182,7 +167,7 @@
         </div>
       </li>
       <li class="Member">
-        <img class="Member__Photo" src="images/team/nandaja.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/nandaja-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
           <h3 class="Member__Name">Nandaja Varma</h3>
           <p class="Member__Designation">Python Hacker</p>
@@ -200,7 +185,7 @@
         </div>
       </li>
       <li class="Member">
-        <img class="Member__Photo" src="images/team/shobha.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/shobha-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
           <h3 class="Member__Name">Shobha Tyagi</h3>
           <p class="Member__Designation">PhD Student</p>
@@ -213,9 +198,9 @@
         </div>
       </li>
       <li class="Member">
-        <img class="Member__Photo" src="images/team/veesa.jpg" alt="photo of Aurelie Herbelot"/>
+        <img class="Member__Photo" src="images/team/veesa-grayscale.png" alt="photo of Aurelie Herbelot"/>
         <div class="Member__Content">
-          <h3 class="Member__Name">Vessa Norman</h3>
+          <h3 class="Member__Name">Veesa Norman</h3>
           <p class="Member__Designation">Mysterious Hacker</p>
           <span class="Member__Social">
             <a href="https://github.com/veesa" target="_blank">
@@ -225,6 +210,7 @@
         </div>
       </li>
     </ul>
+    </section>
 
     <ul class="Splitter">
       <li class="Splitter__Square Splitter__Square--small"></li>
@@ -232,22 +218,7 @@
       <li class="Splitter__Square Splitter__Square--small"></li>
     </ul>
 
-    <section id="footer">
-      <h2>Ready to start contributing to PeARS?</h2>
-      <p>That's great! We are very active on IRC and our discourse discussion platform. Check out our <a href="contribute.html">contributors' page</a>, and drop us a post, or say 'Hi' to us over IRC!</p>
-      <ul class="Footer__Links">
-        <li>
-          <a href="http://webchat.freenode.net/" target="_blank">
-            <h3>IRC: #pears on Freenode</h3>
-          </a>
-        </li>
-        <li>
-          <a href="http://lists.pearsearch.org/" target="_blank">
-            <h3>PeARS Discourse Discussion</h3>
-          </a>
-        </li>
-      </ul>
-    </section>
+    
 
   </section>
   <script type="text/javascript" src="scripts/contribute.js"></script>

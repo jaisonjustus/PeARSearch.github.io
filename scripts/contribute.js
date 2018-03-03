@@ -1,7 +1,7 @@
 var GithubAPI = {
   url: 'https://api.github.com/repos/PeARSearch',
 
-  repos: ['PeARS'],
+  repos: ['PeARS-orchard'],
 
   com: function (method, url, cb, ctx) {
     var xhr = new XMLHttpRequest();
