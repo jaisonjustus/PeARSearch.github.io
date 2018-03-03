@@ -9,3 +9,15 @@
   color: #808080;
   margin: 5px 0 0 0;
 }
+
+@media only screen and (min-width: 320px) {
+  .CallToAction {
+    margin: 0 0 45px 0;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  .CallToAction {
+    margin: 0 0 60px 0;
+  }
+}

@@ -1,20 +1,74 @@
 .Layout__Sidebar  {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 160px;
-  padding-top: 60px;
   box-sizing: border-box;
-  text-align: right;
+  background-color: white;
+  z-index: 1;
 }
 
 .Layout__Content  {
   width: 630px;
-  margin-left: 325px;
   padding: 60px 0;
   box-sizing: border-box;
 }
 
 .Gap--45 {
   margin-top: 45px;
+}
+
+@media only screen and (min-width: 320px) {
+  .Layout__Sidebar  {
+    width: 630px;
+    text-align: center;
+    padding-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .Layout__Content  {
+    width: 100%;
+    margin: 130px auto auto auto;
+    padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  .Layout__Content  {
+    margin: 145px auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .Layout__Content  {
+    width: 530px;
+    padding: 0;
+    margin: 160px auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  .Layout__Content  {
+    width: 630px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Layout__Content  {
+    margin: 180px auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Layout__Sidebar  {
+    width: 160px;
+    text-align: right;
+    padding-top: 60px;
+    left: 0;
+    transform: translateX(0%);
+  }
+
+  .Layout__Content  {
+    margin: 0 0 0 325px;
+    padding: 60px 0;
+  }
 }

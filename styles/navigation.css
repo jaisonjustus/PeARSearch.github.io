@@ -11,7 +11,6 @@
 
 .Navigation--Main li  {
   color: #333333;
-  margin-bottom: 30px;
 }
 
 .Navigation--Main li a  {
@@ -31,7 +30,7 @@
 .Navigation__Splitter {
   border: 0;
   border-bottom: 1px solid #eeeeee;
-  margin-bottom: 20px;
+  display: block;
 }
 
 .Navigation--Secondry {
@@ -41,4 +40,61 @@
 
 .Navigation--Secondry li  {
   margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 320px) {
+
+  .Navigation--Main li  {
+    display: inline-table;
+    margin: 0 15px;
+  }
+
+  .Navigation--Main li a {
+    font-size: 16px;
+  }
+
+  .Navigation__Splitter {
+    margin: 10px 0 0 0;
+  }
+
+  .Navigation--Secondry {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  .Navigation--Main li  {
+    display: inline-table;
+    margin: 0 2% 0 2%;
+  }
+
+  .Navigation--Main li a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .Navigation--Main li  {
+    margin: 0 6% 0 6%;
+  }
+}
+
+/*.Navigation--Main li  {*/
+  /*display: inline-table;*/
+  /*margin: 0 2% 0 2%;*/
+/*}*/
+
+@media only screen and (min-width: 1024px) {
+  .Navigation--Main li  {
+    display: block;
+    margin: 0 0 30px 0;
+  }
+
+  .Navigation__Splitter {
+    margin: 0 0 20px 0;
+  }
+
+  .Navigation--Secondry {
+    display: block;
+  }
 }
